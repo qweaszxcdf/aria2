@@ -67,3 +67,8 @@ jobs:
       run: |
         make
         make check
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@master
+      with:
+        name: aria2c.exe
+        path: aria2/src/aria2c.exe

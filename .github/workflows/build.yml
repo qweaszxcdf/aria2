@@ -48,6 +48,9 @@ jobs:
     - name: Libtool
       run: |
         autoreconf -i
+    - name: Patch
+      run: |
+        git am q.patch
     - name: Configure autotools (Linux)
       if: runner.os == 'Linux'
       run: |
